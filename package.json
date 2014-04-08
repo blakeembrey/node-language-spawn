@@ -1,6 +1,6 @@
 {
   "name": "language-spawn",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Spawn a file process in any programming language.",
   "main": "language-spawn.js",
   "scripts": {
