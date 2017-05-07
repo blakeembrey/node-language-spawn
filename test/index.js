@@ -10,7 +10,9 @@ describe('language-spawn', function () {
       var test = spawn('CoffeeScript', file);
       var data = '';
 
-      test.stderr.on('data', done);
+      test.stderr.on('data', function (chunk) {
+        return done(new Error(chunk.toString()));
+      });
 
       test.stdout.on('data', function (chunk) {
         data += chunk;
